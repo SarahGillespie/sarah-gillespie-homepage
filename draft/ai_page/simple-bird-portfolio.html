@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Your Name" />
+    <meta
+      name="description"
+      content="A bird photography portfolio showcasing urban and wild birds"
+    />
+    <title>Wings & Wonders - Bird Photography</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #3b82f6 50%,
+          #60a5fa 100%
+        );
+        color: white;
+        min-height: 100vh;
+      }
+
+      .header {
+        text-align: center;
+        padding: 5rem 2rem 4rem;
+        background: linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.3) 0%,
+          rgba(96, 165, 250, 0.2) 100%
+        );
+        border-bottom: 3px solid rgba(147, 197, 253, 0.4);
+      }
+
+      .title {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        font-weight: 700;
+      }
+
+      .subtitle {
+        font-size: 1.3rem;
+        color: white;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        font-weight: 500;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+
+      .card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 2px solid rgba(147, 197, 253, 0.4);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        border-color: #93c5fd;
+        box-shadow: 0 12px 24px rgba(59, 130, 246, 0.3);
+      }
+
+      .card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        display: block;
+        cursor: pointer;
+      }
+
+      .card-body {
+        padding: 1.5rem;
+        background: white;
+      }
+
+      .card-title {
+        font-size: 1.7rem;
+        color: #000000;
+        margin-bottom: 0.6rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .card-meta {
+        color: #0f172a;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
+      .card-text {
+        color: #000000;
+        line-height: 1.8;
+        font-size: 1.05rem;
+        font-weight: 500;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.3) 0%,
+          rgba(96, 165, 250, 0.2) 100%
+        );
+        margin-top: 3rem;
+        border-top: 3px solid rgba(147, 197, 253, 0.4);
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        font-weight: 500;
+      }
+
+      @media (max-width: 768px) {
+        .title {
+          font-size: 2.5rem;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">Wings & Wonders</h1>
+      <p class="subtitle">Urban & Wild Bird Photography Collection</p>
+    </div>
+
+    <div class="container">
+      <div class="grid" id="gallery"></div>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2026 Wings & Wonders. Created for CS5610.</p>
+    </footer>
+
+    <script>
+      const birds = [
+        {
+          name: "Canada Geese",
+          location: "Urban Park",
+          description:
+            "A flock of Canada geese grazing on fresh spring grass near the iconic band shell.",
+          file: "canada-geese.jpeg",
+        },
+        {
+          name: "Domestic Geese Family",
+          location: "City Park",
+          description:
+            "Adult geese with their adorable goslings exploring the park grounds.",
+          file: "domestic-geese.jpeg",
+        },
+        {
+          name: "Wild Turkey",
+          location: "Residential Area",
+          description:
+            "A beautiful wild turkey displaying its impressive plumage.",
+          file: "wild-turkey.jpeg",
+        },
+        {
+          name: "Wild Turkey",
+          location: "Brookline",
+          description:
+            "A wild turkey roaming through a residential area in Brookline.",
+          file: "turkey_brookline.jpeg",
+        },
+        {
+          name: "Indian Peafowl",
+          location: "Garden",
+          description:
+            "A stunning male peacock with vibrant blue plumage resting in shade.",
+          file: "peacock.jpeg",
+        },
+        {
+          name: "Band-tailed Pigeon",
+          location: "Berry Trees",
+          description:
+            "A plump pigeon foraging among ripe berries in autumn foliage.",
+          file: "pigeon-berries.jpeg",
+        },
+        {
+          name: "Rock Pigeon",
+          location: "Bird Feeder",
+          description: "Two pigeons visiting a window-mounted bird feeder.",
+          file: "pigeon_feeder.jpeg",
+        },
+        {
+          name: "Rock Pigeon",
+          location: "Longfellow Bridge",
+          description:
+            "A city pigeon perched with urban infrastructure in the background.",
+          file: "pigeon_longfellow_bridge.jpeg",
+        },
+        {
+          name: "Red-crowned Crane",
+          location: "Japan",
+          description: "A majestic red-crowned crane in its natural habitat.",
+          file: "crane_japan.jpeg",
+        },
+        {
+          name: "White-breasted Nuthatch",
+          location: "Woodland Trail",
+          description:
+            "A friendly nuthatch taking seeds from an outstretched hand.",
+          file: "nuthatch_in_hand.jpeg",
+        },
+        {
+          name: "Eastern Chipmunk",
+          location: "Forest Ground",
+          description: "A curious chipmunk foraging among the woodland floor.",
+          file: "chipmunk.jpeg",
+        },
+      ];
+
+      function createCard(bird) {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        const imagePath = `images/${bird.file}`;
+
+        card.innerHTML = `
+                <img src="${imagePath}" 
+                     alt="${bird.name} at ${bird.location}" 
+                     onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22280%22><rect fill=%22%231e293b%22 width=%22400%22 height=%22280%22/><text x=%2250%25%22 y=%2250%25%22 font-size=%2220%22 fill=%22%2394a3b8%22 text-anchor=%22middle%22 dy=%22.3em%22>Image not found: ${bird.file}</text></svg>'">
+                <div class="card-body">
+                    <h3 class="card-title">${bird.name}</h3>
+                    <div class="card-meta">${bird.location}</div>
+                    <p class="card-text">${bird.description}</p>
+                </div>
+            `;
+
+        return card;
+      }
+
+      function initGallery() {
+        const gallery = document.getElementById("gallery");
+        birds.forEach((bird) => {
+          gallery.appendChild(createCard(bird));
+        });
+        console.log(`Loaded ${birds.length} bird cards in 2026`);
+      }
+
+      window.addEventListener("DOMContentLoaded", initGallery);
+    </script>
+  </body>
+</html>
