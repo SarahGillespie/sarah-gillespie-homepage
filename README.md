@@ -2,7 +2,7 @@
 
 ## Author: Sarah Elizabeth Gillespie
 
-## Class Link:
+## Class Link: https://sarahgillespie.github.io/sarah-gillespie-homepage/
 
 ## Project Objective
 
