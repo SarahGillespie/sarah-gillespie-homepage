@@ -2,13 +2,18 @@
 
 ## Author: Sarah Elizabeth Gillespie
 
-## Class Link: https://sarahgillespie.github.io/sarah-gillespie-homepage/
+## Class Link: 
+https://sarahgillespie.github.io/sarah-gillespie-homepage/
+https://sarahgillespie.github.io/sarah-gillespie-homepage/simple-bird-portfolio.html
+https://sarahgillespie.github.io/sarah-gillespie-homepage/simple-bird-portfolio.html
 
 ## Project Objective
 
 Sarah Elizabeth Gillespie's personal homepage is a website designed by Sarah Gillespie for the purpose of displaying her relevant academics, projects, and hobbies. Drafted as part of the Northeastern University CS5610 Web Development course.
 
 ## Visual
+
+Video demonstration: https://www.loom.com/share/e97e568e47a240d5b2860fab72deccdb
 
 ![Homepage with dark mode](draft/images/profile.jpg)
 ![Birds page without dark mode](draft/images/birdspage.png)
