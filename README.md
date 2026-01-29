@@ -14,6 +14,7 @@ Sarah Elizabeth Gillespie's personal homepage is a website designed by Sarah Gil
 ## Visual
 
 Video demonstration: https://www.loom.com/share/e97e568e47a240d5b2860fab72deccdb
+Slides demonstration: https://docs.google.com/presentation/d/1flhRyy2vZNkbPXrThLF2lCVtuR2sHNPv5_7WmBcHkmk/edit?usp=sharing
 
 ![Homepage with dark mode](draft/images/profile.jpg)
 ![Birds page without dark mode](draft/images/birdspage.png)
